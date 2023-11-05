@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Студии
+  </title>
+  <style>
+    html {
+      background-color: antiquewhite;
+      font-family: Garamond;
+      font-size: larger;
+    }
+
+    .menu-main {
+      list-style: none;
+      margin: 0;
+      padding-left: 0;
+      margin-top: 30px;
+    }
+
+    a {
+      text-decoration: none;
+      color: black
+    }
+
+    li {
+      display: inline;
+      margin-left: 110px;
+    }
+
+    .topmenu ul li.active a,
+    .topmenu ul li a:hover {
+      text-decoration: none;
+      color: blue;
+    }
+
+    .active {
+      text-decoration: overline;
+    }
+
+    .u {
+      margin-left: -120px;
+      margin-top: 30px;
+    }
+
+    .block2 {
+      margin-left: 30px;
+    }
+
+    .ta {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .u1 {
+      margin-left: -55px;
+    }
+
+    .lil {
+      display: inline;
+      list-style: none;
+      margin-left: 30px;
+    }
+    .im{
+      padding: 5px;
+      border-radius: 15px;
+      height: 200px;
+      width: 250px;
+    }
+    .h3{margin-left: 30px;}
+    .sign {
+    float:left; 
+    margin-left: 30px;
+   }
+   .sign figcaption {
+    margin: 0 auto 5px; 
+    text-align: center;
+   }
+   h3{margin-right: 800px;
+  margin-left: 30px;}
+   .block3{margin-left: 100px;}
+   .block6{margin-left: 100px;}
+   .block9{margin-left: 100px;}
+   
+  </style>
+</head>
+
+<body>
+  <div class="topmenu">
+    <ul class="menu-main">
+      <li><a href="main.html">Главная</a></li>
+      <li><a href="pg2.html">О нас</a></li>
+      <li><a href="pg3.html" class="active">Студии</a></li>
+      <li><a href="pg4.html">Тарифы</a></li>
+      <li><a href="pg1.html">Клубная карта</a></li>
+      <li><a href="pg5.html">Моя страница</a></li>
+    </ul>
+  </div>
+  <div class="block2">
+    <p>Связь с нами <a href="#down"> <img src="png.png" height="25" width="25"></a></p>
+  </div>
+  <h3 class="h3">Студии </h3>
+  <div class="block3"><figure class="sign"><img src="basik.jpg" title="Бассейн" class="im"/><figcaption>Бассейн</figcaption></figure></div>
+  <div class="block4"><figure class="sign"><img src="gym.jpg" title="Тренажерный зал" class="im"/><figcaption>Тренажерный зал</figcaption></figure></div>
+  <div class="block5"><figure class="sign"><img src="dance.jpg" title="Студия танцев" class="im"/><figcaption>Студия танцев</figcaption></figure></div>
+  <div class="block6"><figure class="sign"><img src="joga.jpeg" title="Студия йоги" class="im"/><figcaption>Студия йоги</figcaption></figure></div>
+  <div class="block7"><figure class="sign"><img src="pilates.jpg" title="Студия пилатеса" class="im"/><figcaption>Студия пилатеса</figcaption></figure></div>
+  <div class="block8"><figure class="sign"><img src="stretch.jpeg" title="Студия стретчинга" class="im"/><figcaption>Студия стретчинга</figcaption></figure></div>
+  <h3> А также</h3>
+<div class="block9"><figure class="sign"><img src="hammam.jpg" title="Турецкая баня" class="im"/><figcaption>Турецкая баня</figcaption></figure></div>
+<div class="block10"><figure class="sign"><img src="finnbanya.jpeg" title="Финская баня" class="im"/><figcaption>Финская баня</figcaption></figure></div>
+<div class="block11"><figure class="sign"><img src="massage.jpeg" title="Массаж" class="im"/><figcaption>Массаж</figcaption></figure></div>
+<div class="topmenu"> <a name="down">
+  <table style="width: 100%;" class="ta">
+    <tr>
+      <td align="center" height="70" width="200"> Свяжитесь с нами в социальных сетях:
+        <nav>
+          <ul type="disc" class="u1">
+            <li class="lil"> <a href="https://vk.com" target="_blank"> VK</a></li>
+            <li class="lil"> <a href="http://instagram.com/" target="_blank">Instagram</a></li>
+            <li class="lil"> <a href="https://web.telegram.org/" target="_blank">Telegram</a></li>
+          </ul>
+        </nav>
+      </td>
+
+    </tr>
+  </table>
+</a>
+</div>
+  <div class="topmenu">
+    <ul type="disc" class="u">
+      <li>
+        <a href="#" class="topmenu">Наверх </a>
+      </li>
+    </ul>
+  </div>
+</body>
+<script>
+  $(function () {
+
+    var url = window.location.href;
+
+
+    $(".topmenu a").each(function () {
+
+      if (url == (this.href)) {
+        $(this).closest("li").addClass("active");
+
+        $(this).closest("li").parent().parent().addClass("active");
+      }
+    });
+
+  });
+  $("ul li a").on('click', function (e) {
+    e.preventDefault();
+    $(this).closest('li').addClass('active').siblings().removeClass('active')
+  });  
+</script>
+
+</html>
